@@ -9,7 +9,6 @@ certifi
 charset-normalizer
 click
 Deprecated
-dotenv
 Flask
 gunicorn
 frozenlist
@@ -23,6 +22,7 @@ multidict
 pydantic
 pydantic_core
 python-dateutil
+python-dotenv
 pytz
 requests
 six
