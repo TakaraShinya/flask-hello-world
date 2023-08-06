@@ -131,11 +131,17 @@ def callback():
                 asatte = "明後日:" + weather_json['forecasts'][2]['image']['title']    
             line_bot_api.reply_message(
                             event.reply_token,
-                            TextSendMessage(text=" " + kyou+"\n "+asita+"\n" +asatte))  
+                          TextSendMessage(text=kyou+"\n"+asita+"\n" +asatte)) 
+        elif event.message.text == '時間割':
+            test1 = "月曜日:音国国算社\n火曜日:算理理算国\n水曜日:国国算図理総\n木曜日:体体社算国\n金曜日:道理算体国総"
+
+            line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=test1+"\n "))
         else:
             line_bot_api.reply_message(
-                        event.reply_token,
-                        TextSendMessage(text=event.message.text))
+                            event.reply_token,
+                        TextSendMessage(text=event.message.text))  
     return 'OK'
 
 if __name__ == "__main__":
