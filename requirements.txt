@@ -10,6 +10,7 @@ charset-normalizer
 click
 Deprecated
 Flask
+gunicorn
 frozenlist
 future
 idna
