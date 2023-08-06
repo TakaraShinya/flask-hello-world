@@ -6,6 +6,7 @@ import hashlib
 import hmac
 import json
 import datetime
+import pytz
 import requests
 from dotenv import load_dotenv
 
@@ -110,7 +111,7 @@ def callback():
         app.logger.info("event.reply_token: " + event.reply_token)
         line_bot_api = LineBotApi(os.getenv('LINE_ACCESS_TOKEN'))
         if event.message.text == '現在時刻':
-            reply_message = datetime.datetime.now().strftime('%Y年%m月%d日 %H:%M:%Sです')
+            reply_message = datetime.datetime.now(pytz.timezone('Asia/Tokyo')).strftime('%Y年%m月%d日 %H:%M:%Sです')
             line_bot_api.reply_message(
                         event.reply_token,
                         TextSendMessage(text=reply_message))
