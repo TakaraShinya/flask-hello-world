@@ -9,6 +9,7 @@ certifi
 charset-normalizer
 click
 Deprecated
+dotenv
 Flask
 gunicorn
 frozenlist
