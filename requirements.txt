@@ -22,6 +22,7 @@ multidict
 pydantic
 pydantic_core
 python-dateutil
+pytz
 requests
 six
 typing_extensions
